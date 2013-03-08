@@ -7,8 +7,14 @@
 	<video  width="720" height="400" controls="controls"  poster="GNU.jpeg">
 
 	<!-- HTML5 video tag options :'poster' to show a image on the view area before the video is played. 'controls' for video and audio control options -->
-		<source src = "/home/karthic/Videos/tumho.mp4" />
+		<source src = "/home/karthic/Videos/tumho.mp4" type=" video/mp4;
+			codecs='avc1.42E01E, mp4a.40.2 '" >
 		
+		<source src = "/home/karthic/Videos/tumho.webm" type='video/webm;
+			codecs="vp8 ,vorbis" '>
+	
+
+		<!-- If the option type="video/mp4" is nt specified the video can viewed from firefox browser, however chrome still supports -->	
 	</video>
 
 </body>
