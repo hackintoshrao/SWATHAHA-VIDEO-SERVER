@@ -1,21 +1,32 @@
-<doctype html>
+<doctype html >
 <html>
 <head>
-	<title>SWATHAHA VIDEO's</title>
+	<title>SWATHAHA VIDEO SERVER</title>
 </head>
 <body>
-	<video  width="720" height="400" controls="controls"  poster="GNU.jpeg">
-
-	<!-- HTML5 video tag options :'poster' to show a image on the view area before the video is played. 'controls' for video and audio control options -->
-		<source src = "/home/karthic/Videos/tumho.mp4" type=" video/mp4;
-			codecs='avc1.42E01E, mp4a.40.2 '" >
-		
-		<source src = "/home/karthic/Videos/tumho.webm" type='video/webm;
-			codecs="vp8 ,vorbis" '>
+  <div class="video_player">
+		<video controls="controls" id="freedom_video" poster="GNU.jpeg">
+			<source src="/home/karthic/Videos/tumho.mp4" type="video/mp4" />
+			<!-- mp4 video playback is just supported by chrome browser , so the videos are  converted to webm (which is a standard) before hosting -->	
+			<source src="/home/karthic/Videos/tumho.webm" type="video/webm" />
+		</video>
+  	<div class="custom_controls">
+		<a class="play" title="Play"> </a>
 	
+		<a class="pause" title="Pause"></a> 
 
-		<!-- If the option type="video/mp4" is nt specified the video can viewed from firefox browser, however chrome still supports -->	
-	</video>
-
+		<div class="time_slider"></div>
+	
+		<div id="time">
+			<span class="timer">00:00:00</span> /
+			<span class="duration">00:00:00</span>
+		</div>
+		<div class="volume">
+			<div class="volume_slider"></div>
+			<a class="mute" title="Mute"></a>
+			<a class="unmute" title="Unmute"></a>
+		</div>
+        </div>
+  </div>
 </body>
 </html>
