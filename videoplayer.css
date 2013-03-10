@@ -10,6 +10,16 @@
 		transition: all 0.2s ease-in-out ; 
 		-webkit-transition: all 0.2 ease-in-out ; 
 		-o-transition: all 0.2s ease-in-out ; 
-		-moz-transition
+		-moz-transition: all 0.2s ease-in-out;
 		}
-
+		.play { background-position: 0.0; }
+		.pause { background-position: 0px -32px; display: none; }
+		.play:hover, .pause:hover { opacity: 1;}
+		
+		.ui-slider-handle { display:block;margin-left: -9px;
+					position:absolute ; z-index: 2; }
+		.ui-slider-range { bottom: 0; display: block; height:100%; 
+					left: 0;position:absolute;width: 100%; z-index: 1;}
+		.time_slider { border: 1px solid #444; height: 10px;width:470px; margin-top:5px;position:relative;
+			border-radius: 15px 15px 15px 15px ;
+			
